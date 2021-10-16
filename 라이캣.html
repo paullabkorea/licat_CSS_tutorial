@@ -27,8 +27,9 @@
             left: -5px;
             width: 60px;
             height: 1px;
+            background-color: #000;
             border: 5px solid #000;
-            border-radius: 20%;
+            border-radius: 30%;
             transform: rotate(-30deg);
         }
 
@@ -38,8 +39,9 @@
             left: 15px;
             width: 60px;
             height: 1px;
+            background-color: #000;
             border: 5px solid #000;
-            border-radius: 20%;
+            border-radius: 30%;
             transform: rotate(-35deg);
         }
 
@@ -49,8 +51,9 @@
             right: -5px;
             width: 60px;
             height: 1px;
+            background-color: #000;
             border: 5px solid #000;
-            border-radius: 20%;
+            border-radius: 30%;
             transform: rotate(30deg);
         }
 
@@ -60,8 +63,9 @@
             right: 15px;
             width: 60px;
             height: 1px;
+            background-color: #000;
             border: 5px solid #000;
-            border-radius: 20%;
+            border-radius: 30%;
             transform: rotate(35deg);
         }
 
@@ -90,7 +94,7 @@
         .licat .ear {
             position: absolute;
             top: 0;
-            width: 92px;
+            width: 80px;
             height: 92px;
             border: 10px solid #000;
             border-radius: 100%;
@@ -98,13 +102,41 @@
         }
 
         .licat .ear.left {
-            top: 40px;
-            left: 20px;
+            top: 35px;
+            left: 65px;
+            transform: rotate(-30deg);
+            border-radius: 70% 50% 0 0;
         }
 
         .licat .ear.right {
+            top: 35px;
+            right: 65px;
+            transform: rotate(30deg);
+            border-radius: 50% 70% 0 0;
+        }
+
+        .licat .earline.left {
+            position: absolute;
             top: 40px;
-            right: 20px;
+            left: 0;
+            width: 60px;
+            background-color: #000;
+            border: 5px solid #000;
+            border-radius: 30%;
+            transform: rotate(90deg);
+            border-radius: 10% 0 0 60%;
+        }
+
+        .licat .earline.right {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 60px;
+            background-color: #000;
+            border: 5px solid #000;
+            border-radius: 30%;
+            transform: rotate(90deg);
+            border-radius: 60% 0 0 10%;
         }
 
         .licat .face {
@@ -202,8 +234,12 @@
 </head>
 <body>
     <div class="licat">  
-        <div class="ear left"></div>
-        <div class="ear right"></div>
+        <div class="ear left">
+            <div class="earline left"></div>
+        </div>
+        <div class="ear right">
+            <div class="earline right"></div>
+        </div>
         
         <div class="face">
           <div class="line left top"></div>
