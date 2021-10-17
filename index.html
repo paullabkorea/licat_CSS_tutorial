@@ -7,15 +7,6 @@
     <title>Document</title>
     <style>
         /* animaion */
-        @keyframes 입 {
-            from {
-                transform: scale(0.8);
-            }
-            to {
-                transform: scale(1.2);
-            }
-        }
-
         @keyframes 얼굴 {
             0% {
                 transform: scale(0.8);
@@ -33,6 +24,34 @@
                 transform: scale(0.8) rotate(0deg);
             }
         }
+        @keyframes 귀오른쪽 {
+            from {
+                transform: rotate(30deg);
+            }
+            to {
+                transform: rotate(40deg) translateX(10px);
+            }
+        }
+
+        @keyframes 귀왼쪽 {
+            from {
+                transform: rotate(-30deg);
+            }
+            to {
+                transform: rotate(-40deg) translateX(-10px);
+            }
+        }
+
+        @keyframes 입 {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+
         @keyframes 홍조 {
             from {
                 transform: scale(0.8);
@@ -157,6 +176,7 @@
             transform: rotate(-30deg);
             border-radius: 70% 50% 0 0;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: 귀왼쪽 0.3s infinite alternate;
             /* 아래와 같은 방식을 사용하기도 합니다. */
             /* border-bottom-left-radius: 10px; */
             /* border-bottom-right-radius: 10px; */
@@ -168,6 +188,7 @@
             transform: rotate(30deg);
             border-radius: 50% 70% 0 0;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: 귀오른쪽 0.3s infinite alternate;
         }
 
         .licat .earline.left {
