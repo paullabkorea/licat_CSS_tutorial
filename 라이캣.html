@@ -6,6 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* animaion */
+        @keyframes 입 {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes 얼굴 {
+            0% {
+                transform: scale(0.8);
+            }
+            25% {
+                transform: scale(1.2) rotate(20deg);
+            }
+            50% {
+                transform: scale(0.8) rotate(0deg);
+            }
+            75% {
+                transform: scale(1.2) rotate(-20deg);
+            }
+            100% {
+                transform: scale(0.8) rotate(0deg);
+            }
+        }
+        @keyframes 홍조 {
+            from {
+                transform: scale(0.8);
+            }
+            to {
+                transform: scale(1.4);
+            }
+        }
+        /* setting */
+        :root {
+            --pri : #CE705F;
+            --sec : #ECD376;
+        }
+        /* reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* layout */
+        /* design */
         *, *:after, *:before {
             box-sizing: border-box;
         }
@@ -19,6 +66,7 @@
             margin: 50px auto;
             width: 400px;
             height: 380px;
+            animation: 얼굴 3s infinite alternate;
         }
 
         .licat .line.left.top{
@@ -76,8 +124,9 @@
             width: 40px;
             height: 25px;
             border-radius: 100%;
-            background: #CE705F;
+            background: var(--pri);
             z-index: 3;
+            animation: 홍조 0.5s infinite alternate;
         }
 
         .licat .홍조.오른쪽{
@@ -87,8 +136,9 @@
             width: 40px;
             height: 25px;
             border-radius: 100%;
-            background: #CE705F;
+            background: var(--pri);
             z-index: 3;
+            animation: 홍조 0.5s infinite alternate;
         }
 
         .licat .ear {
@@ -98,7 +148,7 @@
             height: 92px;
             border: 10px solid #000;
             border-radius: 100%;
-            background: #ecd376;
+            background: var(--sec);
         }
 
         .licat .ear.left {
@@ -106,6 +156,10 @@
             left: 65px;
             transform: rotate(-30deg);
             border-radius: 70% 50% 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            /* 아래와 같은 방식을 사용하기도 합니다. */
+            /* border-bottom-left-radius: 10px; */
+            /* border-bottom-right-radius: 10px; */
         }
 
         .licat .ear.right {
@@ -113,6 +167,7 @@
             right: 65px;
             transform: rotate(30deg);
             border-radius: 50% 70% 0 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .licat .earline.left {
@@ -146,7 +201,9 @@
             height: 310px;
             border-radius: 120%;
             border: 10px solid #000;
-            background: #ecd376;
+            background: var(--sec);
+            /* offset-x | offset-y | blur-radius | spread-radius | color */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
         .licat .eye {
@@ -190,13 +247,13 @@
 
         .licat .mouth.left {
             left: 127px;
-            background-color: #ecd376;
+            background-color: var(--sec);
             z-index: 1;
         }
 
         .licat .mouth.right {
             right: 127px;
-            background-color: #ecd376;
+            background-color: var(--sec);
             z-index: 1;
         }
 
@@ -210,6 +267,7 @@
             left: 165px;
             z-index: 0;
             background: #c94f53;
+            animation: 입 0.3s infinite alternate;
         }
 
         .licat .mouth.right:before {
@@ -219,7 +277,7 @@
             left: -90px;
             width: 180px;
             height: 50px;
-            background: #ecd376;
+            background: var(--sec);
             z-index: 3;
         }
 
@@ -230,6 +288,7 @@
         .licat .mouth.right:before {
             right: 31px;
         }
+        /* media query */
     </style>
 </head>
 <body>
