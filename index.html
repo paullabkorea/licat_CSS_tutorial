@@ -71,6 +71,17 @@
             }
         }
 
+
+        @keyframes 머리카락 {
+            from {
+                transform: translateX(-43%) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(-44%) rotate(5deg);
+            }
+        }
+
         /* setting */
         :root {
             --pri: #CE705F;
@@ -341,7 +352,7 @@
             left: 50%;
             top: -60px;
             z-index: 10;
-            transform: translateX(-43%);
+            animation: 머리카락 0.5s infinite alternate;
         }
 
         /* media query */
